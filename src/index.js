@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
+import "moment/locale/ko";
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+<MuiPickersUtilsProvider utils={MomentUtils}>
+<React.StrictMode>
+<App />
+</React.StrictMode>
+</MuiPickersUtilsProvider>,
+document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
